@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Global function to handle "Add to Cart"
     window.addToCart = (event) => {
         const productId = event.currentTarget.getAttribute('data-product-id');
-        const product = products.find(p => p.id == productId);
+        const product = products.find(p => p.id === parseInt(productId));
         const productName = product?.name || 'Item';
         
         // 1. Update Cart Count
